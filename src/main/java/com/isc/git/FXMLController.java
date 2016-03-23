@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
 public class FXMLController implements Initializable {
@@ -14,8 +15,9 @@ public class FXMLController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setContentText("Version 1.1");
+        a.showAndWait();
     }
     
     @Override
